@@ -5,5 +5,6 @@ export type Todo = {
 
 export type TodoTableProps = {
     todos: Todo[];
+    handleDelete: (index: number) => void;
 }
 

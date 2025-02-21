@@ -22,6 +22,9 @@ function TodoList() {
             setTodo({ description: '', duedate: '' })
         }
     };
+    const handleDelete = (index: number) => {
+        setTodos(todos.filter((_, i) => i !== index));
+    };
     return (
         <>
             <input
@@ -36,7 +39,8 @@ function TodoList() {
                 value={todo.duedate}
             />
             <button onClick={handleAdd}>Add</button>
-            <TodoTable todos={todos} />
+            <TodoTable todos={todos} handleDelete={handleDelete} />
+
         </>
 
     );
