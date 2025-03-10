@@ -1,6 +1,6 @@
 export type Todo = {
     description: string;
-    duedate: string;
+    date: string;
     priority: string;
 }
 
